@@ -39,4 +39,4 @@ override_dh_auto_test:
 	true
 
 override_dh_strip:
-	dh_strip -a --dbg-package=libignition-transport8-dbg
+	dh_strip -a --dbg-package=libignition-transport9-dbg

@@ -1,24 +1,6 @@
-ignition-transport8 (8.0.0-1~sid) sid; urgency=medium
+ignition-transport9 (8.999.999-1~sid) sid; urgency=medium
 
-  * ignition-transport8 8.0.0-1 release
+  * Stub to be removed after first entry
 
- -- Jose Luis Rivero <jrivero@osrfoundation.org>  Tue, 10 Dec 2019 12:16:37 +0100
-
-ignition-transport8 (8.0.0~pre3-1~sid) sid; urgency=medium
-
-  * ignition-transport8 8.0.0~pre3-1 release
-
- -- Nate Koenig <nate@osrfoundation.org>  Fri, 06 Dec 2019 16:05:22 -0700
-
-ignition-transport8 (8.0.0~pre2-1~sid) sid; urgency=medium
-
-  * ignition-transport8 8.0.0~pre2-1 release
-
- -- Jose Luis Rivero <jrivero@osrfoundation.org>  Tue, 03 Dec 2019 15:34:15 +0100
-
-ignition-transport8 (8.0.0~pre1-1~sid) sid; urgency=medium
-
-  * ignition-transport8 8.0.0~pre1-1 release
-
- -- Jose Luis Rivero <jrivero@osrfoundation.org>  Thu, 28 Nov 2019 16:41:38 +0100
+ -- Jose Luis Rivero <jrivero@osrfoundation.org>  Wed, 15 Jul 2020 19:49:14 +0200
 
