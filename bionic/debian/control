@@ -1,0 +1,82 @@
+Source: ignition-transport9
+Standards-Version: 3.9.4
+Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
+Section: science
+Priority: extra
+Build-Depends: cmake,
+               pkg-config,
+               debhelper (>= 11),
+               doxygen,
+               python3,
+               ruby-ronn,
+               libprotoc-dev,
+               libprotobuf-dev,
+               libignition-msgs5-dev,
+               libignition-cmake2-dev,
+               libignition-tools-dev,
+               protobuf-compiler,
+               uuid-dev,
+               libzmq3-dev (>= 3.0.0),
+               libsqlite3-dev
+Vcs-Browser: https://github.org/ignition-relase/ign-transport9-release
+Vcs-Git: https://github.org/ignition-relase/ign-transport9-release
+Homepage: https://github.com/ignition-release/ign-transport
+
+Package: libignition-transport9-core-dev
+Architecture: any
+Section: libdevel
+Depends: libignition-transport9 (= ${binary:Version}),
+         uuid-dev,
+         libzmq3-dev (>= 3.0.0),
+         libignition-msgs5-dev,
+         libignition-cmake2-dev,
+         libignition-tools-dev,
+         ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Robotics transport Library - Core Dev files
+
+Package: libignition-transport9
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Robotics Transport Library - Shared library
+
+Package: libignition-transport9-log-dev
+Architecture: any
+Section: libdevel
+Depends: libsqlite3-dev,
+         libignition-cmake2-dev,
+         libignition-transport9-core-dev,
+         libignition-transport9-log (= ${binary:Version}),
+         ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Robotics transport Library - Core Dev
+
+Package: libignition-transport9-log
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Robotics Transport Library - Log Shared library
+
+Package: libignition-transport9-dev
+Architecture: any
+Section: libdevel
+Depends: libignition-transport9-core-dev,
+         libignition-transport9-log-dev,
+         ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Robotics transport Library - Metapackage
+
+Package: libignition-transport9-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends:
+     libignition-transport9 (= ${binary:Version}),
+     ${misc:Depends}
+Multi-Arch: same
+Description: Ignition Robotics transport Library - Debugging symbols
