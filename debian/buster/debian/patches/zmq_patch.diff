@@ -1,0 +1,28 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 084b6daf..97c2b2d4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -46,19 +46,9 @@ ign_find_package(IgnProtobuf
+ # Find ZeroMQ
+ ign_find_package(ZeroMQ VERSION 4 REQUIRED PRIVATE)
+ 
+-if (UNIX AND NOT APPLE)
+-  execute_process(COMMAND lsb_release -cs
+-    OUTPUT_VARIABLE RELEASE_CODENAME
+-    RESULT_VARIABLE LSB_RESULT
+-    OUTPUT_STRIP_TRAILING_WHITESPACE
+-  )
+-
+-  if( NOT (${LSB_RESULT} STREQUAL "0"))
+-    message(WARNING "lsb_release executable not found. Disabling focal-specific workarounds")
+-  elseif (${RELEASE_CODENAME} STREQUAL "focal")
+-    set(UBUNTU_FOCAL 1)
+-  endif()
+-endif()
++# set as Focal to workaround
++# https://github.com/ignitionrobotics/ign-transport/pull/159
++set(UBUNTU_FOCAL 1)
+ 
+ #--------------------------------------
+ # Find cppzmq
+
